@@ -198,8 +198,8 @@ namespace My_FTPDownloader
                     string totalSize;
                     long total = 0L;
                     string remotePath = FTPLogin.ftp.showCurrentDir();
-                    FTPLogin.ftp.chDir(remotePath + "/" + downloadFileName);
-
+                    // FTPLogin.ftp.chDir(remotePath + "/" + downloadFileName);2018-9-28
+                    FTPLogin.ftp.chDir(remotePath);
                     string[] currentFileList = FTPLogin.ftp.Dir("");
                     foreach (string item in currentFileList)
                     {
